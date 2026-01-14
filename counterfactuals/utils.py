@@ -107,7 +107,7 @@ def load_data(data_filepath):
     return df, feature_config
 
 
-def encode_features(df, categorical):
+def  encode_features(df, categorical):
     """
     Input:
         df: dataframe containing feature names in columns
@@ -214,7 +214,8 @@ def get_relevant_candidates(study, x, model, y_target, tol):
     candidates = []
 
     # Iterate over best trials and update feature values in x_prime 
-    for trial in study.best_trials:  
+    for trial in study.best_trials:
+    # for trial in study.trials:
         x_prime = x.copy()
         for param in x.columns.values:
             if param in trial.params: # Iterate over features 
