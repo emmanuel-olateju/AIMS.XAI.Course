@@ -200,7 +200,7 @@ def epsilon_rounding(x, x_prime, epsilon):
     If very small float changes, revert to original value.
     """
     for feature in x.columns.values:
-        if type(x[feature].values[0]) == np.float64:
+        if type(x[feature].values[0]) == np.float64:  # noqa: E721
             if np.abs(x[feature].values[0] - x_prime[feature].values[0]) <= epsilon:
                 x_prime[feature] = x[feature].values[0]
 
@@ -229,6 +229,16 @@ def get_relevant_candidates(study, x, model, y_target, tol):
 
     y_primes = np.array(y_primes)
     candidates = np.array(candidates)
+
+    # DEBUG: Print prediction statistics
+    print(f"\nPredictions from {len(y_primes)} trials:")
+    print(f"  Target: {y_target}")
+    print(f"  Tolerance: {tol}")
+    print(f"  Min prediction: {y_primes.min():.3f}")
+    print(f"  Max prediction: {y_primes.max():.3f}")
+    print(f"  Mean prediction: {y_primes.mean():.3f}")
+    print(f"  Predictions within tolerance: {np.sum(np.abs(y_primes - y_target) <= tol)}")
+
 
     # Check if any counterfactual candidates meet the tolerance condition and select candidates 
     eps_condition = np.abs(y_primes - y_target) <= tol
