@@ -21,6 +21,7 @@ dependencies = [
     { name = "optuna" },
     { name = "pandas" },
     { name = "ruff" },
+    { name = "sage-importance" },
     { name = "scikit-learn" },
     { name = "seaborn" },
     { name = "shap", version = "0.49.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14'" },
@@ -40,6 +41,7 @@ requires-dist = [
     { name = "optuna", specifier = ">=4.6.0" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "ruff", specifier = ">=0.14.13" },
+    { name = "sage-importance", specifier = ">=0.0.6" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "shap", specifier = ">=0.49.1" },
@@ -1250,6 +1252,22 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/6a/c5/abd840d4132fd51a12f594934af5eba1d5d27298a6f5b5d6c3be45301caf/ruff-0.14.13-py3-none-win32.whl", hash = "sha256:ef720f529aec113968b45dfdb838ac8934e519711da53a0456038a0efecbd680", size = 12919024, upload-time = "2026-01-15T20:14:43.647Z" },
     { url = "https://files.pythonhosted.org/packages/c2/55/6384b0b8ce731b6e2ade2b5449bf07c0e4c31e8a2e68ea65b3bafadcecc5/ruff-0.14.13-py3-none-win_amd64.whl", hash = "sha256:6070bd026e409734b9257e03e3ef18c6e1a216f0435c6751d7a8ec69cb59abef", size = 14097887, upload-time = "2026-01-15T20:15:01.48Z" },
     { url = "https://files.pythonhosted.org/packages/4d/e1/7348090988095e4e39560cfc2f7555b1b2a7357deba19167b600fdf5215d/ruff-0.14.13-py3-none-win_arm64.whl", hash = "sha256:7ab819e14f1ad9fe39f246cfcc435880ef7a9390d81a2b6ac7e01039083dd247", size = 13080224, upload-time = "2026-01-15T20:14:45.853Z" },
+]
+
+[[package]]
+name = "sage-importance"
+version = "0.0.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "joblib" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "scipy" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/71/2e/b33c5e77dccd84f6ba0b78b62ce543f03af1ab0ef9a8909246a05d7ff24e/sage-importance-0.0.6.tar.gz", hash = "sha256:bc7c17c40ba5f67a8163cd21fae7ced38d3aef75c21b1ab938240c624892135f", size = 24005, upload-time = "2024-02-06T03:52:48.365Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/92/73/fc28f24d44ce0c07b844397de8bd2ed4b6f8d183ae56cae13371e0909a2a/sage_importance-0.0.6-py3-none-any.whl", hash = "sha256:db94171ce7ac43176ad5cdced536f4fe157d14ec3c0d9b044bdab24e6c2fb3a5", size = 27299, upload-time = "2024-02-06T03:52:46.59Z" },
 ]
 
 [[package]]
